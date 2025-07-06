@@ -23,8 +23,7 @@ const Footer = () => {
               <img src={logo} alt="Barber's Voice" className="h-12 w-auto" />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Mississauga's premier destination for luxury barbering. Experience the perfect blend of 
-              traditional craftsmanship and modern style at Barber's Voice.
+              Premium barbering in Mississauga. Traditional craftsmanship meets modern style.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
@@ -133,31 +132,15 @@ const Footer = () => {
               © 2024 Barber's Voice. All rights reserved.
             </div>
             
-            <div className="flex items-center gap-6">
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-              >
-                <a
-                  href="https://www.google.com/search?q=Barber%27s+Voice+Mississauga+reviews&oq=Barber%27s+Voice+Mississauga+reviews"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Google Reviews
-                </a>
-              </Button>
-              
-              <button
-                onClick={scrollToTop}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2"
-              >
-                Back to Top
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                </svg>
-              </button>
-            </div>
+            <button
+              onClick={scrollToTop}
+              className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2"
+            >
+              Back to Top
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>

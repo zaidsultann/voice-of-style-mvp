@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Scissors, Crown, Target, Star } from "lucide-react";
 
 const About = () => {
   return (
@@ -12,18 +13,12 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                At Barber's Voice, we believe that a great haircut is more than just a service – it's an art form, 
-                a moment of transformation, and a boost of confidence that carries you through your day.
+                Premium barbering where traditional craftsmanship meets modern luxury. 
+                Every cut is executed with precision and passion.
               </p>
               <p>
-                Located in the heart of Mississauga, our barbershop combines traditional craftsmanship with 
-                modern luxury. Every cut, every shave, every detail is executed with precision and passion by 
-                our skilled master barbers.
-              </p>
-              <p>
-                We've created an atmosphere where you can relax, unwind, and experience the finest in men's 
-                grooming. From classic cuts to contemporary styles, we listen to your vision and bring it to life 
-                with exceptional skill and attention to detail.
+                Located in Mississauga, we create an atmosphere where you can relax 
+                and experience the finest in men's grooming.
               </p>
             </div>
             
@@ -47,27 +42,27 @@ const About = () => {
           {/* Values Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-slide-up">
             <div className="card-luxury text-center">
-              <div className="text-4xl mb-4">✂️</div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Master Craftsmanship</h3>
-              <p className="text-muted-foreground">Precision cuts by experienced professionals who take pride in their art</p>
+              <Scissors className="text-primary text-4xl mb-4 mx-auto" size={32} />
+              <h3 className="text-xl font-semibold mb-2 text-white">Master Craftsmanship</h3>
+              <p className="text-muted-foreground">Precision cuts by experienced professionals</p>
             </div>
             
             <div className="card-luxury text-center">
-              <div className="text-4xl mb-4">👑</div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Luxury Experience</h3>
-              <p className="text-muted-foreground">Premium atmosphere designed for your comfort and relaxation</p>
+              <Crown className="text-primary text-4xl mb-4 mx-auto" size={32} />
+              <h3 className="text-xl font-semibold mb-2 text-white">Luxury Experience</h3>
+              <p className="text-muted-foreground">Premium atmosphere for your comfort</p>
             </div>
             
             <div className="card-luxury text-center">
-              <div className="text-4xl mb-4">🎯</div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Attention to Detail</h3>
-              <p className="text-muted-foreground">Every cut is tailored to your unique style and preferences</p>
+              <Target className="text-primary text-4xl mb-4 mx-auto" size={32} />
+              <h3 className="text-xl font-semibold mb-2 text-white">Attention to Detail</h3>
+              <p className="text-muted-foreground">Tailored to your unique style</p>
             </div>
             
             <div className="card-luxury text-center">
-              <div className="text-4xl mb-4">⭐</div>
-              <h3 className="text-xl font-semibold mb-2 text-primary">Excellence Always</h3>
-              <p className="text-muted-foreground">Committed to delivering the highest quality service every time</p>
+              <Star className="text-primary text-4xl mb-4 mx-auto" size={32} />
+              <h3 className="text-xl font-semibold mb-2 text-white">Excellence Always</h3>
+              <p className="text-muted-foreground">Highest quality service every time</p>
             </div>
           </div>
         </div>

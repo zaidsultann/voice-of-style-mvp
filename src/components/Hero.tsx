@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { MapPin, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-barbershop.jpg";
 import logo from "@/assets/logo.png";
 
@@ -38,7 +39,7 @@ const Hero = () => {
         
         {/* Subheading */}
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed animate-slide-up" style={{ animationDelay: '0.2s' }}>
-          Experience the art of traditional barbering with modern luxury in the heart of Mississauga
+          Traditional barbering meets modern luxury
         </p>
 
         {/* CTA Buttons */}
@@ -59,22 +60,27 @@ const Hero = () => {
           </Button>
           
           <Button
-            variant="outline-luxury"
+            asChild
+            variant="white"
             size="lg"
-            className="text-xl px-12 py-6 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white hover:text-background"
-            onClick={() => {
-              const element = document.getElementById('about');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
+            className="text-xl px-12 py-6 shadow-2xl"
           >
-            Learn More
+            <a href="tel:(905) 607-0008">
+              Call Now
+            </a>
           </Button>
         </div>
 
         {/* Business Info */}
-        <div className="mt-16 text-white/80 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          <p className="text-lg mb-2">📍 3700 Eglinton Ave W Unit #63, Mississauga</p>
-          <p className="text-lg">📞 (905) 607-0008</p>
+        <div className="mt-16 text-white/80 animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ animationDelay: '0.6s' }}>
+          <div className="flex items-center gap-2">
+            <MapPin size={20} />
+            <span className="text-lg">3700 Eglinton Ave W, Mississauga</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Phone size={20} />
+            <span className="text-lg">(905) 607-0008</span>
+          </div>
         </div>
       </div>
 

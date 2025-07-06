@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 /* Barber's Voice Design System - High-end luxury barbershop aesthetic */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap');
 
 @layer base {
   :root {
-    /* Dark luxury theme */
+    /* Dark luxury theme with white accent */
     --background: 220 13% 8%;
     --foreground: 35 20% 95%;
 
@@ -28,6 +28,9 @@
 
     --accent: 35 60% 55%;
     --accent-foreground: 220 13% 8%;
+
+    --white: 0 0% 100%;
+    --white-foreground: 220 13% 8%;
 
     --destructive: 0 70% 60%;
     --destructive-foreground: 220 13% 8%;
@@ -110,12 +113,13 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    @apply bg-background text-foreground font-sans antialiased text-lg;
+    font-family: 'Lato', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
   }
 }
 

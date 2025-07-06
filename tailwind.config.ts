@@ -61,6 +61,10 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				white: {
+					DEFAULT: 'hsl(var(--white))',
+					foreground: 'hsl(var(--white-foreground))'
 				}
 			},
 			borderRadius: {
@@ -122,8 +126,8 @@ export default {
 				'float': 'float 3s ease-in-out infinite'
 			},
 			fontFamily: {
-				'serif': ['Playfair Display', 'serif'],
-				'sans': ['Inter', 'sans-serif']
+				'serif': ['Oswald', 'sans-serif'],
+				'sans': ['Lato', 'sans-serif']
 			},
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
