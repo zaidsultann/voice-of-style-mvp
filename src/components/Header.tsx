@@ -115,13 +115,13 @@ const Header = () => {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="fixed left-0 right-0 top-[88px] bottom-0 z-40 md:hidden">
+          <div className="fixed inset-0 top-20 z-40 md:hidden">
             <div 
               className="absolute inset-0 bg-background/95 backdrop-blur-md"
               onClick={() => setIsMobileMenuOpen(false)}
             />
-            <div className="relative h-full bg-background border-t border-border overflow-y-auto">
-              <div className="px-6 py-6 space-y-4">
+            <div className="relative bg-background border-t border-border">
+              <div className="px-6 py-4 space-y-4">
                 <button
                   onClick={() => scrollToSection('home')}
                   className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
