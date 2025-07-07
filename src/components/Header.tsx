@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo2.svg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +29,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="Barber's Voice" className="h-12 w-auto" />
+            <button
+              onClick={() => scrollToSection('home')}
+              className="hover:opacity-80 transition-opacity duration-300"
+            >
+              <img src={logo} alt="Barber's Voice" className="h-16 w-auto" />
+            </button>
           </div>
 
           {/* Navigation Links */}

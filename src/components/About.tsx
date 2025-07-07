@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Scissors, Crown, Target, Star } from "lucide-react";
+import { Scissors, Crown, Target } from "lucide-react";
 
 const About = () => {
   return (
@@ -13,20 +13,16 @@ const About = () => {
             </h2>
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Premium barbering where traditional craftsmanship meets modern luxury. 
-                Every cut is executed with precision and passion.
-              </p>
-              <p>
-                Located in Mississauga, we create an atmosphere where you can relax 
-                and experience the finest in men's grooming.
+                Barber's Voice offers customers the cleanest haircuts, beard shaves, hair colouring & more by experienced staff members who have been working in this industry for more than 7 years. You will be assured looking fresh and clean each time you step into Barber's Voice.
               </p>
             </div>
             
             <div className="mt-8">
               <Button
                 asChild
-                variant="luxury"
+                variant="outline-luxury"
                 size="lg"
+                className="shadow-2xl border-white text-white hover:bg-white hover:text-black"
               >
                 <a
                   href="https://www.fresha.com/a/barbers-voice-mississuaga-3700-eglinton-avenue-west-deuipxgm/all-offer?menu=true"
@@ -40,29 +36,29 @@ const About = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 animate-slide-up">
-            <div className="card-luxury text-center">
-              <Scissors className="text-primary text-4xl mb-4 mx-auto" size={32} />
-              <h3 className="text-xl font-semibold mb-2 text-white">Master Craftsmanship</h3>
-              <p className="text-muted-foreground">Precision cuts by experienced professionals</p>
+          <div className="animate-slide-up">
+            {/* Top row - 2 boxes */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div className="card-luxury text-center">
+                <Scissors className="text-primary text-4xl mb-4 mx-auto" size={32} />
+                <h3 className="text-xl font-semibold mb-2 text-white">Master Craftsmanship</h3>
+                <p className="text-muted-foreground">Precision cuts by professionals</p>
+              </div>
+              
+              <div className="card-luxury text-center">
+                <Crown className="text-primary text-4xl mb-4 mx-auto" size={32} />
+                <h3 className="text-xl font-semibold mb-2 text-white">Luxury Experience</h3>
+                <p className="text-muted-foreground">Premium atmosphere for your comfort</p>
+              </div>
             </div>
             
-            <div className="card-luxury text-center">
-              <Crown className="text-primary text-4xl mb-4 mx-auto" size={32} />
-              <h3 className="text-xl font-semibold mb-2 text-white">Luxury Experience</h3>
-              <p className="text-muted-foreground">Premium atmosphere for your comfort</p>
-            </div>
-            
-            <div className="card-luxury text-center">
-              <Target className="text-primary text-4xl mb-4 mx-auto" size={32} />
-              <h3 className="text-xl font-semibold mb-2 text-white">Attention to Detail</h3>
-              <p className="text-muted-foreground">Tailored to your unique style</p>
-            </div>
-            
-            <div className="card-luxury text-center">
-              <Star className="text-primary text-4xl mb-4 mx-auto" size={32} />
-              <h3 className="text-xl font-semibold mb-2 text-white">Excellence Always</h3>
-              <p className="text-muted-foreground">Highest quality service every time</p>
+            {/* Bottom row - 1 centered box */}
+            <div className="flex justify-center">
+              <div className="card-luxury text-center w-full sm:max-w-sm">
+                <Target className="text-primary text-4xl mb-4 mx-auto" size={32} />
+                <h3 className="text-xl font-semibold mb-2 text-white">Attention to Detail</h3>
+                <p className="text-muted-foreground">Tailored to your unique style</p>
+              </div>
             </div>
           </div>
         </div>

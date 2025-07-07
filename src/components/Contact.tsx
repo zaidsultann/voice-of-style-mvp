@@ -4,13 +4,13 @@ import { MapPin, Phone } from "lucide-react";
 const Contact = () => {
 
   const businessHours = [
-    { day: 'Monday', hours: '10 a.m.–7 p.m.' },
-    { day: 'Tuesday', hours: '10 a.m.–7 p.m.' },
-    { day: 'Wednesday', hours: '10 a.m.–7 p.m.' },
-    { day: 'Thursday', hours: '10 a.m.–7 p.m.' },
-    { day: 'Friday', hours: '10 a.m.–7 p.m.' },
-    { day: 'Saturday', hours: '9 a.m.–6 p.m.' },
-    { day: 'Sunday', hours: '10 a.m.–4 p.m.' }
+    { day: 'Monday', hours: '10:00AM - 7:00PM' },
+    { day: 'Tuesday', hours: '10:00AM - 7:00PM' },
+    { day: 'Wednesday', hours: '10:00AM - 7:00PM' },
+    { day: 'Thursday', hours: '10:00AM - 7:00PM' },
+    { day: 'Friday', hours: '10:00AM - 7:00PM' },
+    { day: 'Saturday', hours: '9:00AM - 6:00PM' },
+    { day: 'Sunday', hours: '10:00AM - 4:00PM' }
   ];
 
 
@@ -28,8 +28,21 @@ const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Contact Info */}
-          <div className="card-luxury">
+          {/* Business Hours - Shows first on mobile */}
+          <div className="card-luxury lg:order-2">
+            <h3 className="text-2xl font-semibold text-primary mb-6">Hours</h3>
+            <div className="space-y-3">
+              {businessHours.map((schedule, index) => (
+                <div key={index} className="flex justify-between items-center py-2 border-b border-border/50 last:border-b-0">
+                  <span className="font-medium text-white">{schedule.day}</span>
+                  <span className="text-muted-foreground">{schedule.hours}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Contact Info - Shows second on mobile */}
+          <div className="card-luxury lg:order-1">
             <h3 className="text-2xl font-semibold text-primary mb-6">Get In Touch</h3>
             
             <div className="space-y-6">
@@ -74,7 +87,7 @@ const Contact = () => {
                 <Button
                   asChild
                   variant="white"
-                  className="w-full"
+                  className="text-lg w-full"
                 >
                   <a href="tel:(905) 607-0008">
                     Call Now
@@ -83,26 +96,13 @@ const Contact = () => {
               </div>
             </div>
           </div>
-
-          {/* Business Hours */}
-          <div className="card-luxury">
-            <h3 className="text-2xl font-semibold text-primary mb-6">Hours</h3>
-            <div className="space-y-3">
-              {businessHours.map((schedule, index) => (
-                <div key={index} className="flex justify-between items-center py-2 border-b border-border/50 last:border-b-0">
-                  <span className="font-medium text-white">{schedule.day}</span>
-                  <span className="text-muted-foreground">{schedule.hours}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Map Section */}
         <div className="mt-16">
           <div className="card-luxury">
             <h3 className="text-2xl font-semibold text-primary mb-6 text-center">Find Us</h3>
-            <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden">
+            <div className="w-full h-80 md:h-96 rounded-lg overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.8954982934157!2d-79.6542!3d43.6065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3f6b9a0f9c3d%3A0x1234567890abcdef!2s3700%20Eglinton%20Ave%20W%20Unit%20%2363%2C%20Mississauga%2C%20ON%20L5M%202R9!5e0!3m2!1sen!2sca!4v1234567890123"
                 width="100%"

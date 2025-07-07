@@ -1,21 +1,21 @@
 import { useState } from "react";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import gallery1 from "@/assets/int (1).jpg";
+import gallery2 from "@/assets/int (2).jpg";
+import gallery3 from "@/assets/int (3).jpg";
+import gallery6 from "@/assets/int (4).jpg";
+import gallery4 from "@/assets/int (5).jpg";
+import gallery5 from "@/assets/int (6).jpg";
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
-    { src: gallery1, alt: "Professional barber station with vintage leather chair" },
-    { src: gallery2, alt: "Luxury barbershop waiting area" },
-    { src: gallery3, alt: "Premium barber tools and equipment" },
-    { src: gallery4, alt: "Barbershop storefront exterior" },
-    { src: gallery5, alt: "Professional barber in action" },
-    { src: gallery6, alt: "Premium hair care products display" },
+    { src: gallery1, alt: "" },
+    { src: gallery2, alt: "" },
+    { src: gallery3, alt: "" },
+    { src: gallery4, alt: "" },
+    { src: gallery5, alt: "" },
+    { src: gallery6, alt: "" },
   ];
 
   const openLightbox = (imageSrc: string) => {

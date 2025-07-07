@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone } from "lucide-react";
-import heroImage from "@/assets/hero-barbershop.jpg";
-import logo from "@/assets/logo.png";
+import heroImage from "@/assets/barbersvoice-background.png";
+import logo from "@/assets/logo.svg";
 
 const Hero = () => {
   return (
@@ -24,17 +24,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         {/* Logo */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-2 md:mb-8 animate-fade-in">
           <img 
             src={logo} 
             alt="Barber's Voice" 
-            className="mx-auto h-24 md:h-32 w-auto drop-shadow-2xl"
+            className="mx-auto h-20 md:h-24 w-auto drop-shadow-2xl"
           />
         </div>
 
         {/* Main Heading */}
         <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 animate-slide-up">
-          Premium <span className="text-gradient">Barbering</span>
+          Barber's <span className="text-gradient">Voice</span>
         </h1>
         
         {/* Subheading */}
@@ -61,12 +61,12 @@ const Hero = () => {
           
           <Button
             asChild
-            variant="white"
+            variant="outline-luxury"
             size="lg"
-            className="text-xl px-12 py-6 shadow-2xl"
+            className="text-xl px-8 py-6 shadow-2xl border-white text-white hover:bg-white hover:text-black"
           >
             <a href="tel:(905) 607-0008">
-              Call Now
+              Call to Book
             </a>
           </Button>
         </div>
@@ -75,21 +75,14 @@ const Hero = () => {
         <div className="mt-16 text-white/80 animate-fade-in flex flex-col sm:flex-row gap-4 justify-center items-center" style={{ animationDelay: '0.6s' }}>
           <div className="flex items-center gap-2">
             <MapPin size={20} />
-            <span className="text-lg">3700 Eglinton Ave W, Mississauga</span>
+            <span className="text-xl">3700 Eglinton Ave W, Mississauga</span>
           </div>
           <div className="flex items-center gap-2">
             <Phone size={20} />
-            <span className="text-lg">(905) 607-0008</span>
+            <span className="text-xl">(905) 607-0008</span>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-        </div>
-      </div>
+      </div>   
     </section>
   );
 };

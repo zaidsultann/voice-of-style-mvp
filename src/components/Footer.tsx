@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo1.svg";
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -19,33 +19,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
+            <h2 className="text-2xl font-bold text-primary mb-4">Barber's Voice</h2>
             <div className="flex items-center space-x-3 mb-6">
               <img src={logo} alt="Barber's Voice" className="h-12 w-auto" />
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6 max-w-md">
-              Premium barbering in Mississauga. Traditional craftsmanship meets modern style.
+              We offer customers the cleanest services by experienced, professional staff members. You will be assured looking fresh and clean each time you step out of Barber's Voice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                asChild
-                variant="luxury"
-              >
-                <a
-                  href="https://www.fresha.com/a/barbers-voice-mississuaga-3700-eglinton-avenue-west-deuipxgm/all-offer?menu=true"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Book Appointment
-                </a>
-              </Button>
-              <Button
-                asChild
-                variant="outline-luxury"
-              >
-                <a href="tel:(905) 607-0008">
-                  Call Now
-                </a>
-              </Button>
             </div>
           </div>
 
@@ -101,47 +82,44 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-primary mb-4">Contact</h3>
             <div className="space-y-3 text-muted-foreground">
               <div>
-                <p className="font-medium">Address:</p>
-                <p className="text-sm">
+                <p className="font-medium font-semibold">Address:</p>
+                <p className="text-medium">
                   3700 Eglinton Ave W Unit #63<br />
                   Mississauga, ON L5M 2R9
                 </p>
               </div>
               <div>
-                <p className="font-medium">Phone:</p>
+                <p className="font-medium font-semibold">Phone:</p>
                 <a 
                   href="tel:(905) 607-0008"
-                  className="text-sm text-primary hover:text-accent transition-colors duration-300"
+                  className="text-medium text-primary hover:text-accent transition-colors duration-300"
                 >
                   (905) 607-0008
                 </a>
               </div>
               <div>
-                <p className="font-medium">Hours:</p>
-                <p className="text-sm">Mon-Fri: 10am-7pm</p>
-                <p className="text-sm">Sat: 9am-6pm, Sun: 10am-4pm</p>
+                <p className="font-medium font-semibold">Hours:</p>
+                <p className="text-medium">Mon-Fri: 10am-7pm</p>
+                <p className="text-medium">Sat: 9am-6pm, Sun: 10am-4pm</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-sm text-muted-foreground">
-              © 2024 Barber's Voice. All rights reserved.
-            </div>
-            
-            <button
-              onClick={scrollToTop}
-              className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm flex items-center gap-2"
+        {/* Copyright and Attribution */}
+        <div className="mt-8 pt-8 border-t border-border text-center text-muted-foreground">
+          <p className="mb-1">Copy Right © 2025 Barber's Voice</p>
+          <p>
+            Powered by{' '}
+            <a 
+              href="https://digitalizers.ca" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary hover:text-primary/80 transition-colors font-medium"
             >
-              Back to Top
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-              </svg>
-            </button>
-          </div>
+              Digitalizers Inc.
+            </a>
+          </p>
         </div>
       </div>
     </footer>
