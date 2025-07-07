@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo2.svg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,12 @@ const Header = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    // Close mobile menu after navigation
+    setIsMobileMenuOpen(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -93,12 +101,82 @@ const Header = () => {
           </Button>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-foreground hover:text-primary">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            onClick={toggleMobileMenu}
+            className="md:hidden text-foreground hover:text-primary transition-colors duration-300"
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div className="fixed inset-0 top-20 z-40 md:hidden">
+            <div 
+              className="absolute inset-0 bg-background/95 backdrop-blur-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <div className="relative bg-background border-t border-border">
+              <div className="px-6 py-4 space-y-4">
+                <button
+                  onClick={() => scrollToSection('home')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection('gallery')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  Gallery
+                </button>
+                <button
+                  onClick={() => scrollToSection('about')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  About
+                </button>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => scrollToSection('reviews')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  Reviews
+                </button>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="block w-full text-left text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                >
+                  Contact
+                </button>
+                <div className="pt-4 border-t border-border">
+                  <Button
+                    asChild
+                    variant="luxury"
+                    className="w-full"
+                  >
+                    <a
+                      href="https://www.fresha.com/a/barbers-voice-mississuaga-3700-eglinton-avenue-west-deuipxgm/all-offer?menu=true"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Book Now
+                    </a>
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
     </header>
   );
