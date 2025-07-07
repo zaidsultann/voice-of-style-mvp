@@ -102,49 +102,49 @@ const Header = () => {
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
           <div 
-            className="md:hidden fixed inset-0 bg-black/50 z-40"
+            className="md:hidden fixed inset-0 bg-black/80 z-[60]"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
 
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-0 right-0 h-full w-80 bg-background border-l border-border shadow-luxury z-50 transform transition-transform duration-300 ease-in-out ${
+        <div className={`md:hidden fixed top-0 right-0 h-full w-80 bg-background border-l border-border shadow-luxury z-[70] transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
-          <div className="flex flex-col pt-20 px-6 space-y-6">
+          <div className="flex flex-col pt-20 px-6 space-y-6 h-full bg-background">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               Gallery
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('reviews')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               Reviews
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg block w-full"
             >
               Contact
             </button>
