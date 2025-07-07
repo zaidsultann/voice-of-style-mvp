@@ -99,49 +99,57 @@ const Header = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Overlay */}
+        {isMobileMenuOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black/50 z-40"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+
         {/* Mobile Menu */}
-        <div className={`md:hidden fixed top-0 right-0 h-full w-80 bg-background/95 backdrop-blur-md shadow-luxury transform transition-transform duration-300 ease-in-out ${
+        <div className={`md:hidden fixed top-0 right-0 h-full w-80 bg-background border-l border-border shadow-luxury z-50 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
           <div className="flex flex-col pt-20 px-6 space-y-6">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('gallery')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               Gallery
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection('reviews')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               Reviews
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-2"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left py-3 text-lg"
             >
               Contact
             </button>
             
-            <div className="pt-4">
+            <div className="pt-6">
               <Button
                 asChild
                 variant="luxury"
@@ -158,14 +166,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-
-        {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div 
-            className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-        )}
       </nav>
     </header>
   );
