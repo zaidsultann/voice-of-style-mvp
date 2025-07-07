@@ -6,40 +6,34 @@ import { useState } from "react";
 const Reviews = () => {
   const testimonials = [
     {
-      name: "Marcus Thompson",
+      name: "Farook Alyassin",
       rating: 5,
-      review: "Badly needed barber shop was needed in Churchill Meadows. Let's start from the customer service. It is A++, staff are highly skilled and know what they are doing. Very friendly and professional. Atmosphere - It is again A++, visit to see it. Thank you guys!",
-      service: "Classic Haircut & Beard Trim"
+      review: "Great barbershop with very nice and caring barbers. It has a nice barbershop feel with people sitting and chatting with the barbers. They do speak a lot of arabic there so be aware but they cut hair very well and use scissors instead of just clippers.",
     },
     {
-      name: "David Chen",
+      name: "Anas Ozmen",
       rating: 5,
-      review: "Best barbershop experience I've ever had. The hot towel shave was incredible - felt like royalty. The barbers are true professionals who take pride in their work. Worth every penny!",
-      service: "Hot Towel Shave"
+      review: "One of Mississauga's top barbershops, Mohammad and Raad showcase their talent here. The establishment is well-maintained, with reasonable prices and a recommendation for appointments. Plus, they have an ATM conveniently located on-site.",
     },
     {
-      name: "James Rodriguez",
+      name: "Ali Al-Janabi",
       rating: 5,
-      review: "Found my new go-to spot! The consultation was thorough, they really listened to what I wanted, and delivered exactly that. Clean, professional environment with top-notch service. Highly recommended!",
-      service: "Full Service Package"
+      review: "Raad is the most professional barber, I’ve been dealing with him for a long time and he always makes sure that I look great and satisfied before I leave the shop. Highly recommended Raad and his colleagues!",
     },
     {
-      name: "Michael Johnson",
+      name: "Zain Farooqi",
       rating: 5,
-      review: "Exceptional attention to detail and genuine care for customer satisfaction. The atmosphere is welcoming and the skilled barbers deliver consistently excellent results. This is the standard all barbershops should aspire to.",
-      service: "Classic Haircut"
+      review: "First time coming here, go to Muhammad he did a phenomenal job. Got a haircut and a beard trim at a very reasonable price. Very clean place with amazing staff",
     },
     {
-      name: "Alex Martinez",
+      name: "Said Nuker",
       rating: 5,
-      review: "Outstanding service from start to finish. The barbers are true artists who take pride in their craft. The shop has a great vibe and the staff makes you feel like family. Definitely worth the visit!",
-      service: "Beard Trim & Shape"
+      review: "Very good and professional staff. I was in the area and needed a haircut, so I tried it. Since that one time, it became my go-to barbar shop.",
     },
     {
-      name: "Robert Wilson",
+      name: "Hassan Saadaldin",
       rating: 5,
-      review: "Finally found a barbershop that understands quality and craftsmanship. From the moment you walk in, you know you're in for a premium experience. The attention to detail is remarkable.",
-      service: "Full Service Package"
+      review: "Found this new barber shop next to my house, great group of men, very talented, welcoming and experienced, so rest assure you’ll be in great hands. Highly recommend Mo and his team. Make sure to book an appointment!",
     }
   ];
 
